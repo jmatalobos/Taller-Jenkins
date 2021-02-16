@@ -7,6 +7,7 @@ pipeline {
       }
       steps {
         echo 'Hola!'
+        bat 'set'
         bat(script: 'set', returnStdout: true, returnStatus: true, label: 'set')
         bat(script: 'echo %PATH%', label: 'echo', returnStatus: true, returnStdout: true)
         bat(script: 'set Nombre=Juanma', returnStdout: true, returnStatus: true, label: 'set2')
