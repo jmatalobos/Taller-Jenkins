@@ -9,5 +9,11 @@ pipeline {
       }
     }
 
+    stage('Crear archivo') {
+      steps {
+        writeFile(file: 'Prueba.txt', text: 'Prueba Jenkins')
+      }
+    }
+
   }
 }
