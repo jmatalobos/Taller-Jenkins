@@ -5,6 +5,8 @@ pipeline {
       steps {
         echo 'Hola!'
         bat(script: 'echo %PATH%', returnStdout: true)
+        sh '''SET Nombre=Juanma
+ECHO %Nombre%'''
       }
     }
 
