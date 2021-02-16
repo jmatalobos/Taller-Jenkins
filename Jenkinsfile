@@ -4,9 +4,9 @@ pipeline {
     stage('Hola Mundo') {
       steps {
         echo 'Hola!'
-        bat(script: 'set', returnStdout: true, returnStatus: true)
-        bat(script: 'set Nombre=Juanma', returnStdout: true, returnStatus: true)
-        bat(script: 'echo %Nombre%', returnStatus: true, returnStdout: true)
+        bat(script: 'set', returnStdout: true, returnStatus: true, label: 'set')
+        bat(script: 'set Nombre=Juanma', returnStdout: true, returnStatus: true, label: 'set2')
+        bat(script: 'echo %Nombre%', returnStatus: true, returnStdout: true, label: 'echo')
       }
     }
 
@@ -18,7 +18,7 @@ pipeline {
 
     stage('Despedida') {
       steps {
-        input(message: 'Lástima que terminó', ok: 'Excelente taller!')
+        input(message: 'LÃ¡stima que terminÃ³', ok: 'Excelente taller!')
       }
     }
 
