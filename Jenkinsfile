@@ -4,7 +4,7 @@ pipeline {
     stage('Hola Mundo') {
       steps {
         echo 'Hola!'
-        bat(script: 'echo %PATH%', returnStdout: true)
+        bat(script: 'set', returnStdout: true)
         sh '''SET Nombre=Juanma
 ECHO %Nombre%'''
       }
